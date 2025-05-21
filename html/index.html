@@ -6,6 +6,47 @@
     <title>Document</title>
 </head>
 <body>
+    <header>
+    <h1> Can you beat me? </h1>
+    </header>
+    <section class="game-container">
+      
+        
+        <div class="max-score-container">
+            <label for="maxScore">First to: </label>
+        </div>
+        <div class="score-display">
+            <span id="player1Score">0</span> - <span id="player2Score">0</span>
+        </div>
+
+        <form class="players-container">
+          
+            <div class="player-section">
+              <h2>Player 1 (Jekyll)</h2>
+              <div class="score-board">
+                <label for="player1Input">Score: </label>
+                <input id="player1Input" class="ScoreBoard" type="text" value="0" readonly>
+              </div>
+              <button id="player1Button" class="Score" type="button">Joueur 1</button>
+            </div>
+
+        
+            <div class="player-section">
+              <h2> Player 2 (Hyde)</h2>
+              <div class="score-board">
+              <label for="player2Input">Score: </label>
+              <input id="player2Input" class="ScoreBoard" type="text" value="0" readonly>
+              </div>
+            <button id="player2Button" class="Score" type="button">Joueur 1</button>
+            </div>
+       
+       
+
+        <button class="ResetButton" class="NewGamw" type="button">Start Again</button>
+        </form>
     
+</section>
+
+<script src="js/main.js"></script>
 </body>
 </html>
