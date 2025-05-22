@@ -7,6 +7,7 @@ let player2ScoreDisplay = document.querySelector("#player2Score");
 let Player1button = document.querySelector("#player1Button");
 let Player2Button = document.querySelector("#player2Button");
 let resetButton = document.querySelector(".ResetButton");
+let ScoringButtons = document.querySelectorAll(".ScoringButton");
 
 
 let scorePlayer1 = 0;
@@ -20,19 +21,16 @@ document.addEventListener("DOMContentLoaded", function() {
     scorePlayer2 = 0;
 
 
-
 Player1button.addEventListener("click", AddPointsPlayerOne);
 Player2Button.addEventListener("click", AddPointsPlayerTwo);
 resetButton.addEventListener("click", ResetGame);
 
-
 });
 
+
 function AddPointsPlayerOne(){
-    console.log("Player 1 button clicked!");
     if (!gameEnded) {
             scorePlayer1++;
-            console.log("Player 1 score:", scorePlayer1);
             ShowScore();
             AndTheWinnerIs();
     }
@@ -52,28 +50,38 @@ function ShowScore() {
 }
 
 function AndTheWinnerIs(){
-    if (maxScore === scorePlayer1) {
+    if (scorePlayer1 === maxScore) {
         gameEnded = true;
-        alert("Player 1 wins!");
-        DisableButtons;
+   let winner = document.createElement("div");
+   winner.classList.add("winner");
+   winner.textContent = "Player 1 wins!";  
+   document.body.appendChild(winner); 
+        HideButtons();
+    
     }
-    else if (maxScore === scorePlayer2) {
+    else if (scorePlayer2 === maxScore) {
         gameEnded = true;
-        alert("Player 2 wins!");
-        DisableButtons;
+        gameEnded = true;
+   let winner = document.createElement("div");
+   winner.classList.add("winner");
+   winner.textContent = "Player 2 wins!";  
+   document.body.appendChild(winner); 
+        HideButtons();
         }
 
 };
 
 
-function DisableButtons() {
-    Player1button.disabled = true;
-    Player2Button.disabled = true;
+function HideButtons() {
+    ScoringButtons.forEach(button => {
+        button.style.display = "none";
+    });
 }
 
-function EnableButtons() {
-    Player1button.disabled = false;
-    Player2Button.disabled = false;
+function ShowButtons() {
+  ScoringButtons.forEach(button => {
+    button.style.display = "block";
+  });
 }
 
 
@@ -81,7 +89,11 @@ function ResetGame(){
     scorePlayer1 = 0;
     scorePlayer2 = 0;
     gameEnded = false;
+    let winner = document.querySelector(".winner"); 
+    if (winner) {
+        winner.remove();
+    }
     ShowScore();
-    EnableButtons();
+    ShowButtons();
 
 }
