@@ -54,7 +54,7 @@ function AndTheWinnerIs(){
         gameEnded = true;
    let winner = document.createElement("div");
    winner.classList.add("winner");
-   winner.textContent = "Player 1 wins!";  
+   winner.textContent = "Dr Jekyll wins this round!";  
    document.body.appendChild(winner); 
         HideButtons();
     
@@ -63,7 +63,7 @@ function AndTheWinnerIs(){
         gameEnded = true;
    let winner = document.createElement("div");
    winner.classList.add("winner");
-   winner.textContent = "Player 2 wins!";  
+   winner.textContent = "Mr Hyde wins yet again...";  
    document.body.appendChild(winner); 
         HideButtons();
         }
