@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  href="/sass/main.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
       
         
         <div class="maxScoreContainer">
-            <label for="maxScore">First to: 10 </label>
+            <label for="maxScore">First one to 10 wins </label>
         </div>
         <div class="ScoreDisplay">
             <span id="player1Score">0</span> - <span id="player2Score">0</span>
@@ -21,16 +22,15 @@
 
         <form class="playersContainer">
           
-            <div class="playerSection">
-              <button id="player1Button" class="ScoringButton" type="button">Player 1 (Jekyll)</button>
-            </div>
-           <div>
-            <button id="player2Button" class="ScoringButton" type="button">Player 2 (Hyde) </button>
+            <div class="ScoringButtonContainer">
+              <button id="player1Button" class="ScoringButton" type="button"> Dr.Jekyll </button>
+    
+            <button id="player2Button" class="ScoringButton" type="button"> Mr.Hyde </button>
             </div>
        
        
 
-        <button class="ResetButton" class="NewGame" type="button">Start Again</button>
+        <button class="ResetButton" id="NewGame" type="button">Start Again</button>
         </form>
     
 </section>

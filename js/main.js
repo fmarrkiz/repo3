@@ -61,7 +61,6 @@ function AndTheWinnerIs(){
     }
     else if (scorePlayer2 === maxScore) {
         gameEnded = true;
-        gameEnded = true;
    let winner = document.createElement("div");
    winner.classList.add("winner");
    winner.textContent = "Player 2 wins!";  
@@ -69,7 +68,7 @@ function AndTheWinnerIs(){
         HideButtons();
         }
 
-};
+}
 
 
 function HideButtons() {

@@ -1,0 +1,40 @@
+.ScoringButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    white-space: nowrap;
+   }
+
+.ScoringButton, .ResetButton {
+   
+    background-color: $secondary-color;
+    color: white;
+    border: 2px solid #fff;
+    padding: 0.75rem 1.5rem;
+    min-width: 150px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 0 10px $secondary-color;
+}
+
+.ScoringButton:hover,
+.ResetButton:hover {
+    background-color: $secondary-color;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px $secondary-color;
+}
+
+.ResetButton {
+    background-color: $background-color;
+    box-shadow: 0 0 10px $reset-shadow-color;
+}
+
+.ResetButton:hover {
+    background-color: $reset-shadow-color-hover;
+    box-shadow: 0 0 15px $reset-shadow-color-hover;;
+}
+
