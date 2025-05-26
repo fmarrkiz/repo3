@@ -8,13 +8,7 @@ A fun and engaging web application for tracking scores between two players in a 
 
 * Track scores for two players (Dr. Jekyll and Mr. Hyde themed)
 
-* Set winning condition at 10 points
-
-* Real-time score display with large, clear numbers
-
-* Automatic winner detection and announcement
-
-* **Game state management** (buttons hide when game ends)
+* Set winning condition at 10 points with automatic winner detection and announcement
 
 * **Dynamic Game Management :** Seamlessly add points, detect winners, and reset games.
 
@@ -46,13 +40,11 @@ This project is built using fundamental web technologies:
 
 * **Reset Game :** Click "Start Again" button to reset scores to 0-0 and begin a new round.
 
-* **Visual Feedback :** Buttons glow and scale on hover, creating an engaging gaming experience.
-
 ## Future Enhancements
 
 * **Customizable Max Score :** Allow players to set different winning conditions (5, 15, 21 points, etc.).
 
-* **Player Names :** Enable custom player names instead of fixed Dr. Jekyll/Mr. Hyde theme.
+* **Player Names :** Enable custom player names.
 
 * **Score History :** Track and display previous game results and statistics.
 
